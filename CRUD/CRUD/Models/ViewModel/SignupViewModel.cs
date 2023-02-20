@@ -8,7 +8,7 @@ namespace CRUD.Models.ViewModel
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Please enter Correct Username!")]
-        [Remote(action: "NameIsExist", controller: "Account")]
+        //[Remote(action: "NameIsExist", controller: "Account")]
         public string Username { get; set; }
         
         [Required(ErrorMessage = "Please enter Valid Email")]
@@ -24,7 +24,7 @@ namespace CRUD.Models.ViewModel
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Please confirm Password")]
-        [Compare("Password",ErrorMessage ="Password didn't match!!!")]
+        [Compare("Password", ErrorMessage ="Password didn't match!!!")]
         [Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
     }

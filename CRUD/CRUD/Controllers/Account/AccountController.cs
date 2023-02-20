@@ -80,19 +80,6 @@ namespace CRUD.Controllers.Account
             return RedirectToAction("Login","Account");
         }
 
-        [AcceptVerbs("Post","Get")]
-        public IActionResult NameIsExist(string name)
-        {
-            var userName = myContext.Contacts.Where(x => x.Username == name).SingleOrDefault();
-            if (userName != null)
-            {
-                return Json($"Username {userName} is already in Use!");
-            }
-            else
-            {
-                return Json(true);
-            }
-        }
 
         [HttpGet]
         public IActionResult SignUp()
@@ -105,17 +92,26 @@ namespace CRUD.Controllers.Account
         {
             if(ModelState.IsValid)
             {
-                var newMember = new Contact()
+                var nameData = myContext.Contacts.Where(x => x.Username == model.Username).SingleOrDefault();
+                if (nameData == null)
                 {
-                    Username= model.Username,
-                    Phone= model.Phone,
-                    Email= model.Email,
-                    Password= model.Password,
-                };
-                myContext.Contacts.Add(newMember);
-                myContext.SaveChanges();
-                TempData["successMSG"] = "Registered Successfully! Fill Login form to Log In.";
-                return RedirectToAction("Login");
+                    var newMember = new Contact()
+                    {
+                        Username = model.Username,
+                        Phone = model.Phone,
+                        Email = model.Email,
+                        Password = model.Password,
+                    };
+                    myContext.Contacts.Add(newMember);
+                    myContext.SaveChanges();
+                    TempData["successMSG"] = "Registered Successfully! Fill Login form to Log In.";
+                    return RedirectToAction("Login");
+                }
+                else
+                {
+                    TempData["errorDuplicate"] = $"Username {model.Username} already in Use!";
+                    return View();
+                }
             }
             else
             {

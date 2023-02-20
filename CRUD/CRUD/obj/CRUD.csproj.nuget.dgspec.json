@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BS358\\Documents\\CRUD_ASP.Net\\CRUD\\CRUD\\CRUD.csproj": {}
+    "C:\\Users\\BS358\\Documents\\CRUD_APS.Net\\CRUD\\CRUD\\CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BS358\\Documents\\CRUD_ASP.Net\\CRUD\\CRUD\\CRUD.csproj": {
+    "C:\\Users\\BS358\\Documents\\CRUD_APS.Net\\CRUD\\CRUD\\CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BS358\\Documents\\CRUD_ASP.Net\\CRUD\\CRUD\\CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\BS358\\Documents\\CRUD_APS.Net\\CRUD\\CRUD\\CRUD.csproj",
         "projectName": "CRUD",
-        "projectPath": "C:\\Users\\BS358\\Documents\\CRUD_ASP.Net\\CRUD\\CRUD\\CRUD.csproj",
+        "projectPath": "C:\\Users\\BS358\\Documents\\CRUD_APS.Net\\CRUD\\CRUD\\CRUD.csproj",
         "packagesPath": "C:\\Users\\BS358\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BS358\\Documents\\CRUD_ASP.Net\\CRUD\\CRUD\\obj\\",
+        "outputPath": "C:\\Users\\BS358\\Documents\\CRUD_APS.Net\\CRUD\\CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.12, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Validation": {
+              "target": "Package",
+              "version": "[3.2.12, )"
             }
           },
           "imports": [
