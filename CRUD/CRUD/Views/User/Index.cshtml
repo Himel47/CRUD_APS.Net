@@ -1,0 +1,39 @@
+﻿@model List<Users>
+
+@{
+}
+
+<div id="PlaceHolderHere"></div>
+
+<h2>Contact List</h2>
+
+<a class="btn btn-primary btn-sm" asp-controller="User" asp-action="AddUser">Add New Contact</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.Phone</td>
+                <td>@user.Address</td>
+                <td class="btn-group gap-2">
+                    <a class="btn btn-outline-primary rounded" href="User/View/@user.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
