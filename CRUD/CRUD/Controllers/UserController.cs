@@ -1,5 +1,6 @@
 ﻿using CRUD.Data;
 using CRUD.Models;
+using CRUD.Models.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
